@@ -133,6 +133,25 @@ async def helpme(ctx):
     
 '''The Helpme command ends here.'''
 
+'''The Roll command: Rolls a random integer from 1 to 6'''
+@bot.hybrid_command(name='roll', with_app_command=True)
+async def roll(ctx):
+    await ctx.send(randint(1,6))
+
+'''The Roll command ends here'''
+
+'''The Flip command: Flips a coin and tells you whether you get heads or tails'''
+@bot.hybrid_command(name='flip', with_app_command=True)
+async def flip(ctx):
+    num = randint(1,2)
+    if num == 1:
+        result = "Heads"
+    elif num == 2:
+        result = "Tails"
+
+    await ctx.send(result)
+'''The Flip command ends here'''
+
 bot.run("Custom Discord Bot's Token Goes Here")
 
 
