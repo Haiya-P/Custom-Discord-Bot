@@ -152,6 +152,35 @@ async def flip(ctx):
     await ctx.send(result)
 '''The Flip command ends here'''
 
+'''The Fact command: The user gets a random fun fact as soon as the command is activated'''
+@bot.hybrid_command(name='fact', with_app_command=True)
+async def fact(ctx):
+    value = randint(1, 10)
+    if value == 1:
+        fact = "There’s a man who legally changed his name to “Captain Fantastic Faster Than Superman Spiderman Batman Wolverine The Hulk And The Flash Combined”: It’s real, and he lives in the UK."
+    elif value == 2:
+        fact = "There’s a fungus that turns ants into zombies: The Ophiocordyceps fungus infects ants and takes over their central nervous system, forcing them to climb to a high point before killing them and sprouting from their bodies."
+    elif value == 3:
+        fact = "Turritopsis dohrnii, the immortal jellyfish, can also self-destruct: If it experiences trauma, it can revert to its earlier life stage and start over, essentially cheating death."
+    elif value == 4:
+        fact = "There’s a “lost” continent called Zealandia: Largely submerged underwater, Zealandia is a continent of which New Zealand and New Caledonia are part of the visible land."
+    elif value == 5:
+        fact = "A cloud can weigh over a million pounds: Despite their fluffy appearance, the water droplets in a cloud add up to a significant weight."
+    elif value == 6:
+        fact = "Sharks existed before trees: Sharks have been around for about 400 million years, while the first trees appeared about 350 million years ago."
+    elif value == 7:
+        fact = "The manchineel tree is so toxic it can cause burns from just touching it: Native to the Caribbean and Gulf of Mexico, every part of this tree is extremely poisonous, earning it the nickname “tree of death.”"
+    elif value == 8:
+        fact = "Venus is the only planet that rotates clockwise: All other planets in our solar system rotate counterclockwise, except for Venus, which rotates in the opposite direction."
+    elif value == 9:
+        fact = "Cleopatra lived closer in time to the first moon landing than to the construction of the Great Pyramid of Giza: The Great Pyramid was built around 2560 BCE, while Cleopatra lived around 69-30 BCE."
+    elif value == 10:
+        fact = "There’s a lake that’s always pink: Lake Hillier in Australia has a distinct pink color due to the presence of Dunaliella salina algae and halobacteria."
+    await ctx.send(fact)
+    
+'''The fact command ends here'''
+
+
 bot.run("Custom Discord Bot's Token Goes Here")
 
 
