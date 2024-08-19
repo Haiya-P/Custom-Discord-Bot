@@ -180,6 +180,13 @@ async def fact(ctx):
     
 '''The fact command ends here'''
 
+'''The Ping command: the user requests the latenecy of the bot and the bot returns the latency in ms'''
+@bot.hybrid_command(name='ping', with_app_command=True)
+async def ping(ctx):
+    latency = round(bot.latency * 1000)
+    await ctx.send(f"Pong! 🏓 Latency: {latency}ms")
+    
+'''The ping command ends here'''
 
 bot.run("Custom Discord Bot's Token Goes Here")
 
